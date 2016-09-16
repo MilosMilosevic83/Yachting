@@ -1,0 +1,63 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.main-slider-wrap {
+    background:url(../img/gallery-bg.jpg) no-repeat top center;
+    @include background_stretch;
+}
+.main-slider-menu {
+  padding:20px 0;
+   font-family:$font-main; 
+  h2 {
+     @extend %about-club-headline;
+    text-align: center;
+    color: #fff !important;
+    padding:50px 0 !important;
+  }
+}
+a.bio {
+  @extend %buttons;
+    float: none;
+    margin:20px auto;
+    clear: both;
+    background:#C8E7E9;
+}
+.thumbnail {
+  border:0;
+
+}
+
+
+ul.thumbnails { 
+    margin-bottom: 0px;
+    padding:0;
+
+  li { list-style-type:none;
+      margin-top:15px;
+    @include breakpoint(medium_screen1){
+        padding: 0;
+        }
+      }
+}
+
+
+.control-box {
+    text-align: center;
+    width: 100%;
+}
+.pager {
+  li {
+
+     > a {
+        width: 50px;
+        height: 50px;
+        margin:10px;
+        border:0;
+        border-radius:0;
+        line-height: 40px;
+        color: rgb(32,70,115);
+        background:rgb(255,255,255);
+      }
+    }  
+  }
+

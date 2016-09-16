@@ -1,0 +1,92 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.well {
+  border-radius: 0;
+  font-family: 'Roboto', sans-serif !important;
+  overflow: hidden;
+}
+.well h4 {
+  font-weight: 300;
+}
+.form-control {
+  border-radius: 0;
+}
+.media-object {
+  width:50px;
+}
+
+
+.media {
+  border-top:1px solid rgb(236,236,236);
+  font-family: 'Roboto', sans-serif !important;
+  clear: both;
+  padding:20px 0; 
+  img {
+    max-width: 70px;
+  }
+}
+.border-b {
+    border-bottom:1px solid rgb(245,245,245);
+}
+
+.media-body {
+  background:#fff;
+  padding:20px 10px 0 20px;
+      .btn {
+      float: right;
+      display: block;
+      padding: 10px 35px;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      border: 1px solid rgb(43,62,66);
+      border-radius:0;
+      background: rgb(43,62,66);
+      font-family: 'Roboto', sans-serif !important;
+    }
+  }
+
+.media-body p {
+  clear: both;
+  font-family: 'Roboto', sans-serif !important;
+}
+.media-body h4 {
+  font-weight: 300;
+}
+.comment-area {
+  padding:0;
+  width: 100% !important;
+}
+.comment-area-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding:0;
+    position:relative;
+  p {
+    position:absolute;
+    bottom:15px;
+    left:7px;
+  }
+  button {
+      @extend %buttons;
+      background:rgb(25,40,70);
+      margin:0;
+      float: right;
+    }
+  } 
+.comments-additional {
+  font-family: $font2;
+}
+.panel-heading {
+  background:rgb(60,62,71) !important;
+  .text-muted {
+    color:#fff;
+    font-style: italic;
+  }
+  strong {
+    color:#fff;
+  }
+}

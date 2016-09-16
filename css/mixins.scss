@@ -1,9 +1,11 @@
-@mixin centered{
-	 width: 100%;
-  	max-width: 1010px;
-  	margin:0 auto;
-  
+
+@mixin background_stretch{
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
 @font-face {
   font-family: 'Montserrat900';
   src: url('../fonts/Montserrat-Black.eot');
@@ -146,3 +148,96 @@
 				@media (max-width: 320px) { @content; }
 			}
 		}
+%buttons {
+    display: block;
+      font-size: 1.1em;
+      text-decoration: none;
+      text-align:center;
+      font-family:$font-main;
+      padding: 5px 20px;
+      width: 160px;
+      height: 45px;
+      color: #fff;
+      border:3px solid $main-color;
+      line-height: 29px;
+      background:#213864;
+      cursor:pointer;
+       &:hover {
+        text-decoration: none;
+        color: #fff;
+        background:$main-color;
+        opacity: .8;
+       }
+       @include breakpoint(medium_screen1){
+          margin:50px auto;
+      }
+  }
+%about-club-headline {
+   font-size: 3em;
+    font-weight: 100;
+    margin:0;
+    width: auto;
+    padding:30px;
+    color: #1A2948;
+    text-align: left;
+    font-family: $font1;
+    @include breakpoint(biggest_screen2){
+      font-size: 4em;
+      padding-left:20px;
+    }
+    @include breakpoint(medium_screen1){
+      font-size: 2em;
+   }
+}
+%about-club-para {
+  padding:30px;
+    font-size: 1.7em;
+    font-family: $font1;
+    color: #1F3155;
+    font-weight: 300;
+    @include breakpoint(medium_screen1){
+      font-size: 1.3em;
+      text-align: justify;
+   }
+}
+%sidebar-headlines {
+  font-size: 1.5em;
+     font-family: $font2;
+     border:1px solid rgb(25,40,70);
+     margin-bottom:30px;
+    padding:10px 0 10px 10px;
+    background:rgb(25,40,70);
+    color: #fff;
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// scale
+
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin translate ($x, $y, $z) {
+   @include transform(translate($x, $y, $z));
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }

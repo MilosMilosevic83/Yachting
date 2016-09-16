@@ -1,0 +1,34 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+.about-landing{
+  padding:270px 0;
+  @include breakpoint(medium_screen1){
+    padding:150px 0 300px 0;
+   }
+}
+.about-inner-who {
+  margin-top: -200px;
+
+  h3 {
+     @extend %about-club-headline;
+    text-align: left;
+    color:rgb(15,39,74);
+    padding:50px 0  50px 30px !important;
+      font-family: $font2;
+  }
+  p {
+    font-family: $font2;
+    font-size: 1.5em;
+  }
+}
+.about-who {
+  background:transparent;
+}
+.officers {
+  text-align: center !important;
+  p {
+    font-size: 1.1em;
+    text-align: center;
+    font-family: $font2;
+  }
+}

@@ -1,0 +1,65 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.archive-categories {
+  padding-right:0 !important;
+      @include breakpoint(medium_screen1){
+      width: 100% !important;
+      margin: 20px auto !important;
+      padding:0 !important;
+    }
+}
+
+.search-field {
+   font-family:$font-main;
+   width: 100%;
+   clear: both;
+   margin: 16px 0;
+   overflow: hidden;
+   border-radius:25px;
+   @include breakpoint(medium_screen1){
+      display: none;
+    }
+   .input-group-btn {
+    background:rgb(24,39,70) !important;
+     &:hover {
+      opacity: .8;
+     }
+   }
+   .btn-default {
+    background:transparent;
+   }
+   .search-wrap {
+    padding:0;
+   }
+   .search-btn {
+    display: inline-block;
+    width: 49px;
+    height: 49px;
+    line-height: 40px;
+    cursor: pointer;
+    img {
+      width: 20px;
+      display: block;
+      margin:15px auto;
+    }
+     &:active {
+      background:transparent;
+     }
+   }
+   .form-control {
+    border-radius:25px;
+    border:1px solid rgb(25,39,68);
+    height: 49px;
+    &:focus{
+      border:1px solid rgb(53,56,55);
+     }
+   }
+}
+.search-field-mob {
+  @extend .search-field;
+   display: none;
+   @include breakpoint(medium_screen1){
+      display: block;
+    }
+}

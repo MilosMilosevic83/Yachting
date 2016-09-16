@@ -1,0 +1,60 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.who {
+    background:url(../img/second-bg.jpg) no-repeat top center;
+    @include background_stretch;
+        padding-bottom:30px;
+}
+ .inner-who {
+    margin-top: -100px;
+    background:#fff;
+        padding-bottom:30px;
+     @include breakpoint(medium_screen1){
+       margin-top: -50px;
+      }
+    h2 {
+     @extend %about-club-headline;
+     
+    }
+    p {
+      @extend %about-club-para;
+      
+    }
+    a {
+      @extend %buttons;
+      margin-left: 30px;
+    }
+  }
+ .inner-who2 {
+  margin-top: 30px;
+    background:rgba(35,72,116,.9);
+        padding-bottom:30px;
+    div {
+      padding:0;
+        }
+    h2 {
+      @extend %about-club-headline;
+     color: #fff !important;
+    }
+    p {
+      @extend %about-club-para;
+      color: #fff !important;
+      font-size: 1.3em;
+    }
+    a {
+      @extend %buttons;
+
+      margin-left: 30px;
+      clear: both;
+      background:#fff;
+      color: rgb(25,39,68);
+      border:3px solid #fff;
+    }
+  }
+
+
+.clear {
+  width: 100%;
+  clear: both;
+}

@@ -1,0 +1,64 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.brands-wrap {
+  overflow: hidden;
+  width: 100%;
+  padding:20px 0;
+  font-family:$font-main;
+}
+.brands {
+  padding:0;
+  @include breakpoint(medium_screen1){
+        padding:20px;
+     }
+}
+.newsletter {
+
+  clear: both;
+  float: none;
+  display: block;
+  margin:0 auto; 
+  max-width: 552px;
+  width: 100%;
+  padding:40px 0;
+  label {
+    display: block;
+    clear: both;
+    text-align: left;
+    padding-bottom:20px;
+    font-size: 2em;
+    font-family: $font1;
+    color:$newsletter-color;
+
+      @include breakpoint(medium_screen1){
+        font-size: 1.4em;
+     }
+  }
+  input {
+    width: 70%;
+    float: left;
+    height: 45px;
+    margin-right: 5px;
+    border:3px solid $newsletter-color;
+    background:transparent;
+    color:$newsletter-color;
+    padding-left:15px;
+    @include breakpoint(medium_screen1){
+        width:90%;
+        margin-bottom: 10px;
+     }
+  }
+  button {
+    @extend %buttons;
+    float: none !important;
+    border:3px solid $newsletter-color;
+    background:$newsletter-color;
+    color:#fff;
+    @include breakpoint(medium_screen1){
+      clear: both;
+      float: none;
+      margin:0;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.border-divide {
+  width: 100%;
+  margin:25px auto;
+  overflow: hidden;
+  display: block;
+  float: none;
+  height: 1px;
+  background:#fff;
+  clear: both;
+}
+.full-width {
+  width: 100%;
+  max-width: 1300px !important;
+  overflow: hidden;
+  padding:10px !important;
+  margin-top: 0;
+  @include breakpoint(big_screen1){
+    width:95% !important;
+   }
+}
+.blog-posts {
+  padding:0 !important;
+}
+.single-post-wrap1, .single-post-wrap2 {
+  background: #fff;
+  padding:0 !important;
+  margin: 15px 0 35px 0;
+  text-align: center;
+  overflow: hidden;
+  position:relative;
+}
+
+.single-post-img1 {
+  padding:0 !important;
+  float: none;
+  margin:0 auto;
+  img {
+  width: 100%;
+  }
+}
+
+.single-post-txt-wrap1{
+  background:#fff;
+  padding:0 !important;
+  clear: both;
+}
+
+.single-post-txt-wrap2{
+  background:#fff;
+  padding:0 !important;
+clear: both;
+}
+.full-post {
+  margin-top: 0;
+}
+.single-post-txt {
+    position:relative;
+    padding-bottom:10%;
+    text-align: left;
+     @include breakpoint(medium_screen1) {
+       padding-bottom:17%;
+      }
+    h2 {
+      width:100%;
+      font-size:3.5em; 
+      color:rgb(6,10,9);
+      margin:15px 0 5px 0 !important;
+      padding:0 0 30px 0;
+      font-weight:700;
+      text-align: left;
+      font-family: $font5;
+      font-style: italic;
+      @include breakpoint(big_screen1){
+        font-size: 1.5em;
+      }
+    }
+    h3 {
+      text-align: left;
+      width:80%;
+       margin:10px auto 5px auto !important;
+    }
+    .author-name {
+      color: rgb(6,10,9);
+      font-family:$font-main;
+      font-size: 1.2em;
+      font-style:italic;
+      padding-bottom:20px;
+      display: block;
+       &:hover {
+        text-decoration: none;
+        opacity: .7;
+       }
+    }
+    p {
+
+      color:rgb(144,144,144);
+      margin:10px auto 5px auto !important;
+      padding:0;
+     font-family:$font-main;
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align:left;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+        opacity: .7;
+       }
+    }
+    .more {
+      color: rgb(25,40,70);
+      text-decoration: underline;
+      
+      display: block;
+       font-size: 1.3em;
+      text-decoration: none;
+          text-align:center;
+          font-family:$font-main;
+          font-weight: 300;
+          padding:10px 20px;
+          line-height: 37px;
+          background:transparent;
+          text-decoration: none;
+          width: 150px;
+    border:1px solid rgb(25,40,70);
+    margin-top: 30px;
+    &:hover {
+        text-decoration: none;
+        opacity: 1;
+        background:rgb(25,40,70);
+        color: #fff;
+       }
+    }
+  }
+
+
+.comments {
+    position:absolute;
+    bottom:25px;
+    left:0;
+    background: rgb(61,76,83);
+    font-family:$font-main;
+    color: rgb(6,10,9);
+    background:#fff;
+    line-height: 10px;
+    padding:0;
+     &:before {
+      content: url(../img/cloud-img.png);
+      left:0;
+     }
+     &:hover {
+     text-decoration: none;
+    }
+  }
+
+.pag-wrap {
+  width: 255px;
+  margin:80px auto 20px auto;
+  overflow: hidden;
+}
+.pagination {
+  margin:40px auto !important;
+  display: block;
+  a {
+    color: rgb(6,10,9) !important;
+    margin:3px;
+  }
+  .active {
+    color: #fff !important;
+    background-color:rgb(32,70,115)!important;
+    border:1px solid rgb(32,70,115);
+    &:hover {
+      border:1px solid rgb(6,10,9);
+    }
+  }
+}
